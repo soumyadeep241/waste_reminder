@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waste Collection Reminder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Waste Collection Reminder</h1>
+
+    <label for="area">Select Your Area:</label>
+    <select id="area" onchange="showSchedule()">
+      <option value="">--Choose Area--</option>
+      <option value="greenPark">Green Park</option>
+      <option value="sunriseColony">Sunrise Colony</option>
+    </select>
+
+    <div id="schedule" class="hidden">
+      <h2>Schedule</h2>
+      <ul id="scheduleList"></ul>
+      <button onclick="setReminder()">Set Reminder</button>
+    </div>
+
+    <div class="tips">
+      <h3>Waste Segregation Tips</h3>
+      <ul>
+        <li>Dry waste: Paper, plastic, metal</li>
+        <li>Wet waste: Food scraps, peels</li>
+        <li>E-waste: Dispose separately</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
